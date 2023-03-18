@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, Container } from "@mantine/core";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -8,7 +8,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Kelvin Almonte</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -20,10 +20,25 @@ export default function App(props: AppProps) {
         withNormalizeCSS
         theme={{
           /** Put your mantine theme override here */
-          colorScheme: "light",
+          colorScheme: "dark",
+          components: {
+            Container: {
+              defaultProps: {
+                sizes: {
+                  xs: 540,
+                  sm: 720,
+                  md: 960,
+                  lg: 1140,
+                  xl: 1320,
+                },
+              },
+            },
+          },
         }}
       >
-        <Component {...pageProps} />
+        <Container size="sm">
+          <Component {...pageProps} />
+        </Container>
       </MantineProvider>
     </>
   );
