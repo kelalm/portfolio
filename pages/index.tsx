@@ -5,10 +5,16 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import Header from "../components/Header";
+import MainSection from "@/components/MainSection";
+import Socials from "@/components/Socials";
+
 export default function Home() {
   return (
     <>
-      <h1>Kelvin Almonte</h1>
+      <Header />
+      <MainSection />
+      <Socials />
     </>
   );
 }
