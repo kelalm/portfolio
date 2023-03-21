@@ -6,6 +6,9 @@ export default function NavBar() {
       <Anchor href="/work" target="_blank">
         work
       </Anchor>
+      <Anchor href="/work" target="_blank">
+        writing
+      </Anchor>
     </>
   );
 }
